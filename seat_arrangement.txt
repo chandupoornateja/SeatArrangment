@@ -1,0 +1,18 @@
+Problem Statement:
+Seating Arrangement. You have n students and n chairs in an exam hall. n/3 students are writing Maths, n/3 are writing physics and n/3 are writing chemistry. The n chairs are arranged in two rows, with n/2 in each row. Write an algorithm to make sure no two maths students sit either next/in front/behind of another maths students.
+
+Algorithm:
+1. Initialization
+	subjects as list: subjects = ["M", "P", "C"]
+	Rows as 2 dimension empty list: rows = [][]
+2. Call function with following signature: Arrange_Seat(subjects[], n, rows[][])
+	initialize iterator i = 0
+	initialize current_subject = set(subjects[0])
+	iterate while i < n:
+		Call function: assign_seat(subjects[] - current_subject, rows[][], i/2, i%2)
+		i = i+1
+		current_subject = set(left/right/front/behind rows)
+3. Inside function assign_seat():
+	choose from subjects[] - set(left/right/front/behind rows)
+
+
